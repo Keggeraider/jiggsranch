@@ -82,24 +82,12 @@ summary:focus-visible {
   min-height: 4rem;
 }
 
-.brand-wrap {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-}
-
 .site-title {
   text-decoration: none;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 0.02em;
-}
-
-.header-badge {
-  width: 2rem;
-  height: 2rem;
-  object-fit: contain;
 }
 
 .nav-details {
@@ -357,6 +345,18 @@ figcaption {
   margin: 0.2rem 0;
 }
 
+.nm-badge {
+  display: grid;
+  place-items: center;
+  margin-block: 1.1rem 0.5rem;
+}
+
+.nm-badge img {
+  width: min(200px, 46vw);
+  height: auto;
+  display: block;
+}
+
 @media (min-width: 760px) {
   .container {
     width: min(1100px, 92%);
@@ -364,15 +364,6 @@ figcaption {
 
   .hero-content {
     padding-left: 0;
-  }
-
-  .brand-wrap {
-    gap: 0.7rem;
-  }
-
-  .header-badge {
-    width: 2.3rem;
-    height: 2.3rem;
   }
 
   .nav-toggle {
