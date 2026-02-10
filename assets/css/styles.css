@@ -156,7 +156,7 @@ summary:focus-visible {
   position: relative;
   min-height: clamp(24rem, 55vh, 34rem);
   display: grid;
-  place-items: center;
+  align-items: end;
   overflow: hidden;
 }
 
@@ -185,7 +185,9 @@ summary:focus-visible {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgb(31 31 31 / 20%), rgb(31 31 31 / 46%));
+  background: 
+    radial-gradient(1100px 600px at 18% 20%, rgb(31 31 31 / 22%), rgb(31 31 31 / 0%) 60%),
+    linear-gradient(180deg, rgb(31 31 31 / 12%) 0%, rgb(31 31 31 / 52%) 72%, rgb(31 31 31 / 66%) 100%);
 }
 
 .hero-content {
@@ -193,6 +195,27 @@ summary:focus-visible {
   color: #f8f3ec;
   text-align: left;
   padding-left: 0.2rem;
+  padding-block: clamp(3rem, 8vh, 4.2rem) clamp(2.2rem, 6vh, 3rem);
+}
+
+.hero-eyebrow {
+  margin: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.92;
+}
+
+.hero-badge {
+  width: min(420px, 58vw);
+  margin: 0 0 0.9rem;
+}
+
+.hero-badge img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 16px 30px rgb(0 0 0 / 22%));
 }
 
 .hero h1 {
@@ -400,4 +423,23 @@ figcaption {
   .hero-image {
     transform: none;
   }
+
+  @media (max-width: 420px) {
+    .hero-badge {
+      width: min(340px, 78vw);
+    }
+  }
+
+  [class^="reveal-"] {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 600ms ease, transform 700ms ease;
+  }
+
+  .hero.is-visible .reveal-1 { transition-delay: 80ms;  opacity: 1; transform: translateY(0); }
+  .hero.is-visible .reveal-2 { transition-delay: 160ms; opacity: 1; transform: translateY(0); }
+  .hero.is-visible .reveal-3 { transition-delay: 240ms; opacity: 1; transform: translateY(0); }
+  .hero.is-visible .reveal-4 { transition-delay: 320ms; opacity: 1; transform: translateY(0); }
+  .hero.is-visible .reveal-5 { transition-delay: 400ms; opacity: 1; transform: translateY(0); }
+
 }
