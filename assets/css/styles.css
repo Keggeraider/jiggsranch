@@ -60,6 +60,12 @@ summary:focus-visible {
   width: min(760px, 100%);
 }
 
+@media (max-width: 759px) {
+  .narrow {
+    padding-inline: 0.45rem;
+  }
+}
+
 .site-header {
   position: sticky;
   top: 0;
