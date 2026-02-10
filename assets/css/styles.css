@@ -295,6 +295,50 @@ summary:focus-visible {
   border-radius: inherit;
 }
 
+/* Split hero content into top + bottom zones (mockup layout) */
+.home-hero .hero-content {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* top / spacer / bottom */
+  align-content: stretch;
+  min-height: clamp(20rem, 48vh, 28rem); /* gives the split room to work */
+  padding-block: clamp(2.2rem, 6vh, 3rem) clamp(1.8rem, 5vh, 2.4rem);
+}
+
+/* Top cluster: eyebrow + title */
+.home-hero .hero-eyebrow,
+.home-hero h1 {
+  align-self: start;
+}
+
+/* Bottom cluster: subhead + buttons */
+.home-hero .reveal-3,
+.home-hero .hero-actions {
+  align-self: end;
+}
+
+/* Make eyebrow smaller like mockup */
+.home-hero .hero-eyebrow {
+  font-size: 0.74rem;     /* smaller than your current 0.82rem */
+  letter-spacing: 0.12em;
+  margin: 0;              /* tighter */
+}
+
+/* Tighten spacing between eyebrow and title */
+.home-hero h1 {
+  margin-top: 0.35rem;
+}
+
+/* Keep bottom elements tight */
+.home-hero .reveal-3 {
+  margin-top: 0;          /* stop it from drifting upward */
+}
+
+.home-hero .hero-actions {
+  margin-top: 0.85rem;    /* bring CTAs closer to subhead */
+}
+
+.home-hero .hero-top { align-self: start; }
+.home-hero .hero-bottom { align-self: end; }
 
 #centennial-title {
   scroll-margin-top: 5rem;
