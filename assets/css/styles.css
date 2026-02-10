@@ -168,10 +168,18 @@ summary:focus-visible {
       url("../img/jiggs-ranch-hero-1800x1050.webp") type("image/webp") 1.5x,
       url("../img/jiggs-ranch-hero-2400x1400.webp") type("image/webp") 2x
     );
-  background-position: center;
+  background-position: center 45%;
   background-size: cover;
   background-repeat: no-repeat;
   transform: scale(1.03);
+}
+
+.home-hero .hero-image {
+  background-position: center 35%;
+}
+
+.page-hero .hero-image {
+  background-position: center 55%;
 }
 
 .hero-overlay {
