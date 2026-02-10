@@ -349,13 +349,6 @@ figcaption {
   margin-block: 1.25rem 2.5rem;
 }
 
-.nm-hero img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 16px;
-}
-
 @media (min-width: 760px) {
   .container {
     width: min(1100px, 92%);
