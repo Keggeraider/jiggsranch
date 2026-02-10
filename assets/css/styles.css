@@ -349,6 +349,19 @@ figcaption {
   margin-block: 1.25rem 2.5rem;
 }
 
+.nm-badge {
+  display: grid;
+  place-items: center;
+  margin-block: 1.25rem 1.75rem;
+}
+
+.nm-badge img {
+  width: min(520px, 100%);
+  height: auto;
+  display: block;
+}
+
+
 @media (min-width: 760px) {
   .container {
     width: min(1100px, 92%);
