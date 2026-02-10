@@ -52,7 +52,7 @@ summary:focus-visible {
 }
 
 .container {
-  width: min(1100px, 92%);
+  width: min(1100px, calc(100% - 2.75rem));
   margin: 0 auto;
 }
 
@@ -172,6 +172,7 @@ summary:focus-visible {
   position: relative;
   color: #f8f3ec;
   text-align: left;
+  padding-left: 0.2rem;
 }
 
 .hero h1 {
@@ -339,6 +340,14 @@ figcaption {
 }
 
 @media (min-width: 760px) {
+  .container {
+    width: min(1100px, 92%);
+  }
+
+  .hero-content {
+    padding-left: 0;
+  }
+
   .nav-toggle {
     display: none;
   }
