@@ -228,12 +228,11 @@ summary:focus-visible {
 }
 
 .hero-eyebrow {
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.4rem;
   font-size: 0.82rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   opacity: 0.92;
-  margin-bottom: 0.4rem;
 }
 
 .hero-badge {
@@ -476,27 +475,25 @@ figcaption {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
-  }
+/* =========================
+   Reveal animations (normal)
+========================= */
+[class^="reveal-"] {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 600ms ease, transform 700ms ease;
+}
 
-  .hero-image {
-    transform: none;
-  }
+.hero.is-visible .reveal-1 { transition-delay: 80ms;  opacity: 1; transform: translateY(0); }
+.hero.is-visible .reveal-2 { transition-delay: 160ms; opacity: 1; transform: translateY(0); }
+.hero.is-visible .reveal-3 { transition-delay: 240ms; opacity: 1; transform: translateY(0); }
+.hero.is-visible .reveal-4 { transition-delay: 320ms; opacity: 1; transform: translateY(0); }
+.hero.is-visible .reveal-5 { transition-delay: 400ms; opacity: 1; transform: translateY(0); }
 
-  @media (max-width: 420px) {
-    .hero-badge {
-      width: min(340px, 78vw);
-    }
-  }
-
-  @media (max-width: 700px) {
+/* =========================
+   Mobile tuning (mockup-like)
+========================= */
+@media (max-width: 700px) {
   .hero-content {
     padding-block: 2.2rem 2.2rem;
   }
@@ -515,17 +512,34 @@ figcaption {
   }
 }
 
+@media (max-width: 420px) {
+  .hero-badge {
+    width: min(340px, 78vw);
+  }
+}
 
-  [class^="reveal-"] {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 600ms ease, transform 700ms ease;
+/* =========================
+   Reduced motion
+========================= */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 
-  .hero.is-visible .reveal-1 { transition-delay: 80ms;  opacity: 1; transform: translateY(0); }
-  .hero.is-visible .reveal-2 { transition-delay: 160ms; opacity: 1; transform: translateY(0); }
-  .hero.is-visible .reveal-3 { transition-delay: 240ms; opacity: 1; transform: translateY(0); }
-  .hero.is-visible .reveal-4 { transition-delay: 320ms; opacity: 1; transform: translateY(0); }
-  .hero.is-visible .reveal-5 { transition-delay: 400ms; opacity: 1; transform: translateY(0); }
+  .hero-image {
+    transform: none;
+  }
 
+  /* No staged reveals for reduced motion users */
+  [class^="reveal-"] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
+
