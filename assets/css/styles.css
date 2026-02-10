@@ -181,6 +181,13 @@ summary:focus-visible {
   padding-left: 0.2rem;
 }
 
+.hero-badge {
+  width: min(140px, 35vw);
+  height: auto;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
 .hero h1 {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
@@ -345,18 +352,6 @@ figcaption {
   margin: 0.2rem 0;
 }
 
-.nm-badge {
-  display: grid;
-  place-items: center;
-  margin-block: 1.1rem 0.5rem;
-}
-
-.nm-badge img {
-  width: min(200px, 46vw);
-  height: auto;
-  display: block;
-}
-
 @media (min-width: 760px) {
   .container {
     width: min(1100px, 92%);
@@ -364,6 +359,11 @@ figcaption {
 
   .hero-content {
     padding-left: 0;
+  }
+
+  .hero-badge {
+    width: 170px;
+    margin-bottom: 0.75rem;
   }
 
   .nav-toggle {
