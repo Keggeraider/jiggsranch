@@ -163,8 +163,14 @@ summary:focus-visible {
 .hero-image {
   position: absolute;
   inset: 0;
-  background: linear-gradient(140deg, rgb(47 62 70 / 35%), rgb(79 107 87 / 25%)),
-    radial-gradient(circle at 30% 30%, #9f8a73 0%, #6f7d63 45%, #2f3e46 100%);
+  background-image: image-set(
+      url("../img/jiggs-ranch-hero-1200x1600.webp") type("image/webp") 1x,
+      url("../img/jiggs-ranch-hero-1800x1050.webp") type("image/webp") 1.5x,
+      url("../img/jiggs-ranch-hero-2400x1400.webp") type("image/webp") 2x
+    );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   transform: scale(1.03);
 }
 
@@ -179,13 +185,6 @@ summary:focus-visible {
   color: #f8f3ec;
   text-align: left;
   padding-left: 0.2rem;
-}
-
-.hero-badge {
-  width: min(140px, 35vw);
-  height: auto;
-  display: block;
-  margin-bottom: 0.6rem;
 }
 
 .hero h1 {
@@ -359,11 +358,6 @@ figcaption {
 
   .hero-content {
     padding-left: 0;
-  }
-
-  .hero-badge {
-    width: 170px;
-    margin-bottom: 0.75rem;
   }
 
   .nav-toggle {
