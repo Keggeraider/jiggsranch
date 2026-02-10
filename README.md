@@ -1,2 +1,0 @@
-# jiggsranch
-jiggs ranch website
