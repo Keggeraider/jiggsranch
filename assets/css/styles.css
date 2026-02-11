@@ -247,6 +247,12 @@ summary:focus-visible {
   filter: drop-shadow(0 16px 30px rgb(0 0 0 / 22%));
 }
 
+.page-hero .hero-badge {
+  display: flex;
+  justify-content: center;
+  margin-inline: auto;
+}
+
 .hero h1 {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
