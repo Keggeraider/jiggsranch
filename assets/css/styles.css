@@ -20,7 +20,7 @@
   --container-gutter: 2.75rem;
 }
 
-/* Naming convention for new scalable classes:
+/* Naming convention:
    - Layout: l-*
    - Component: c-*
    - Utility/state: u-* */
@@ -56,28 +56,28 @@ summary:focus-visible {
   outline-offset: 2px;
 }
 
-.hero h1,
-.section h2,
-.section h3,
-.site-title {
+.c-hero h1,
+.c-section h2,
+.c-section h3,
+.c-site-title {
   font-family: "Libre Baskerville", Georgia, serif;
 }
 
 /* =========================
-   Layout Utilities
+   Layout
 ========================= */
-.container,
 .l-container {
   width: min(var(--container-max), calc(100% - var(--container-gutter)));
   margin: 0 auto;
 }
 
-.narrow,
 .l-container--narrow {
   width: min(760px, 100%);
 }
 
-.skip-link,
+/* =========================
+   Header + Navigation
+========================= */
 .c-skip-link {
   position: absolute;
   left: -9999px;
@@ -87,16 +87,11 @@ summary:focus-visible {
   padding: 0.5rem 0.75rem;
 }
 
-.skip-link:focus,
 .c-skip-link:focus {
   left: 1rem;
   z-index: 1000;
 }
 
-/* =========================
-   Header + Navigation
-========================= */
-.site-header,
 .c-site-header {
   position: sticky;
   top: 0;
@@ -106,7 +101,6 @@ summary:focus-visible {
   backdrop-filter: blur(4px);
 }
 
-.nav-wrap,
 .c-nav__wrap {
   display: flex;
   align-items: center;
@@ -114,7 +108,6 @@ summary:focus-visible {
   min-height: 4rem;
 }
 
-.site-title,
 .c-site-title {
   text-decoration: none;
   font-size: 1.25rem;
@@ -122,12 +115,10 @@ summary:focus-visible {
   letter-spacing: 0.02em;
 }
 
-.nav-details,
 .c-nav {
   position: relative;
 }
 
-.nav-toggle,
 .c-nav__toggle {
   list-style: none;
   cursor: pointer;
@@ -143,19 +134,16 @@ summary:focus-visible {
   background: var(--paper);
 }
 
-.nav-toggle::-webkit-details-marker,
 .c-nav__toggle::-webkit-details-marker {
   display: none;
 }
 
-.nav-toggle span,
 .c-nav__toggle span {
   display: block;
   height: 2px;
   background: var(--dusk);
 }
 
-.nav-list,
 .c-nav__list {
   position: absolute;
   right: 0;
@@ -173,7 +161,6 @@ summary:focus-visible {
   box-shadow: var(--shadow-soft);
 }
 
-.nav-list a,
 .c-nav__list a {
   display: block;
   text-decoration: none;
@@ -181,14 +168,11 @@ summary:focus-visible {
   border-radius: 0.25rem;
 }
 
-.nav-list a:hover,
-.nav-list a[aria-current="page"],
 .c-nav__list a:hover,
 .c-nav__list a[aria-current="page"] {
   background: color-mix(in srgb, var(--mesquite) 16%, white);
 }
 
-.nav-details:not([open]) .nav-list,
 .c-nav:not([open]) .c-nav__list {
   display: none;
 }
@@ -196,7 +180,6 @@ summary:focus-visible {
 /* =========================
    Hero
 ========================= */
-.hero,
 .c-hero {
   position: relative;
   display: grid;
@@ -209,14 +192,11 @@ summary:focus-visible {
   box-shadow: var(--shadow-hero);
 }
 
-.hero-image,
-.hero-overlay,
 .c-hero__image,
 .c-hero__overlay {
   border-radius: inherit;
 }
 
-.hero-image,
 .c-hero__image {
   position: absolute;
   inset: 0;
@@ -233,17 +213,14 @@ summary:focus-visible {
   filter: contrast(1.12) saturate(1.2) brightness(0.85) sepia(0.32) hue-rotate(-10deg);
 }
 
-.home-hero .hero-image,
 .c-hero--home .c-hero__image {
   background-position: center 20%;
 }
 
-.page-hero .hero-image,
 .c-hero--page .c-hero__image {
   background-position: center 28%;
 }
 
-.hero-overlay,
 .c-hero__overlay {
   position: absolute;
   inset: 0;
@@ -253,7 +230,6 @@ summary:focus-visible {
     linear-gradient(to bottom, rgb(0 0 0 / 18%) 0%, rgb(0 0 0 / 52%) 65%, rgb(0 0 0 / 70%) 100%);
 }
 
-.hero-content,
 .c-hero__content {
   position: relative;
   z-index: 2;
@@ -265,30 +241,22 @@ summary:focus-visible {
   text-align: center;
 }
 
-.home-hero .hero-content,
-.page-hero .hero-content,
 .c-hero--home .c-hero__content,
 .c-hero--page .c-hero__content {
   text-align: center;
   margin-inline: auto;
 }
 
-.home-hero .hero-content p,
-.page-hero .hero-content p,
 .c-hero--home .c-hero__content p,
 .c-hero--page .c-hero__content p {
   margin-inline: auto;
 }
 
-.home-hero .hero-actions,
-.page-hero .hero-actions,
 .c-hero--home .c-hero__actions,
 .c-hero--page .c-hero__actions {
   justify-content: center;
 }
 
-/* Home hero split layout */
-.home-hero .hero-content,
 .c-hero--home .c-hero__content {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -297,17 +265,14 @@ summary:focus-visible {
   padding-block: clamp(2.2rem, 6vh, 3rem) clamp(1.8rem, 5vh, 2.4rem);
 }
 
-.home-hero .hero-top,
 .c-hero--home .c-hero__top {
   align-self: start;
 }
 
-.home-hero .hero-bottom,
 .c-hero--home .c-hero__bottom {
   align-self: end;
 }
 
-.hero-eyebrow,
 .c-hero__eyebrow {
   margin: 0 0 0.4rem;
   font-size: 0.82rem;
@@ -315,19 +280,16 @@ summary:focus-visible {
   opacity: 0.92;
 }
 
-.home-hero .hero-eyebrow,
 .c-hero--home .c-hero__eyebrow {
   margin: 0;
   font-size: 0.74rem;
 }
 
-.hero-badge,
 .c-hero__badge {
   width: min(420px, 58vw);
   margin: 0 0 0.9rem;
 }
 
-.hero-badge img,
 .c-hero__badge img {
   display: block;
   width: 100%;
@@ -335,14 +297,12 @@ summary:focus-visible {
   filter: drop-shadow(0 16px 30px rgb(0 0 0 / 22%));
 }
 
-.page-hero .hero-badge,
 .c-hero--page .c-hero__badge {
   display: flex;
   justify-content: center;
   margin-inline: auto;
 }
 
-.hero h1,
 .c-hero h1 {
   margin: 0;
   margin-top: 0;
@@ -351,12 +311,10 @@ summary:focus-visible {
   letter-spacing: 0.01em;
 }
 
-.home-hero h1,
 .c-hero--home h1 {
   margin-top: 0.35rem;
 }
 
-.hero p,
 .c-hero p {
   margin: 0.75rem auto 0;
   max-width: 52ch;
@@ -365,21 +323,16 @@ summary:focus-visible {
   opacity: 0.96;
 }
 
-.home-hero .reveal-3,
 .c-hero--home .u-reveal-3 {
   margin-top: 0;
 }
 
-.hero h1,
-.hero p,
-.hero-eyebrow,
 .c-hero h1,
 .c-hero p,
 .c-hero__eyebrow {
   text-shadow: var(--shadow-text-hero);
 }
 
-.hero-actions,
 .c-hero__actions {
   display: flex;
   flex-wrap: wrap;
@@ -387,7 +340,6 @@ summary:focus-visible {
   margin-top: 1.05rem;
 }
 
-.home-hero .hero-actions,
 .c-hero--home .c-hero__actions {
   margin-top: 0.85rem;
 }
@@ -399,7 +351,6 @@ summary:focus-visible {
 /* =========================
    Buttons
 ========================= */
-.btn,
 .c-btn {
   display: inline-block;
   padding: 0.75rem 1.1rem;
@@ -412,25 +363,20 @@ summary:focus-visible {
   box-shadow: 0 10px 22px rgb(0 0 0 / 18%);
 }
 
-.btn:hover,
 .c-btn:hover {
   background: #a85a3e;
 }
 
-.btn-secondary,
 .c-btn--secondary {
   color: #f8f3ec;
   background: rgb(244 239 232 / 12%);
   border-color: rgb(244 239 232 / 34%);
 }
 
-.btn-secondary:hover,
 .c-btn--secondary:hover {
   background: rgb(244 239 232 / 18%);
 }
 
-/* Compact hero button variant */
-.hero .btn,
 .c-hero .c-btn {
   padding: 0.5rem 0.9rem;
   font-size: 0.9rem;
@@ -439,18 +385,15 @@ summary:focus-visible {
   box-shadow: none;
 }
 
-.hero .btn-secondary,
 .c-hero .c-btn--secondary {
   background: rgb(244 239 232 / 10%);
   border-color: rgb(244 239 232 / 28%);
 }
 
-.hero .btn-secondary:hover,
 .c-hero .c-btn--secondary:hover {
   background: rgb(244 239 232 / 16%);
 }
 
-.centennial-actions,
 .c-actions--centennial {
   display: flex;
   flex-wrap: wrap;
@@ -458,7 +401,6 @@ summary:focus-visible {
   margin-top: 0.9rem;
 }
 
-.centennial-actions .btn,
 .c-actions--centennial .c-btn {
   padding: 0.5rem 0.9rem;
   font-size: 0.9rem;
@@ -469,32 +411,27 @@ summary:focus-visible {
 /* =========================
    Content Sections
 ========================= */
-.section,
 .c-section {
   padding: clamp(2.2rem, 6vw, 4rem) 0;
 }
 
-.section h2,
 .c-section h2 {
   margin-top: 0;
   font-size: clamp(1.45rem, 3vw, 2.1rem);
 }
 
-.section-warm,
 .c-section--warm {
   background: color-mix(in srgb, var(--sand) 85%, white);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 
-.card-grid,
 .c-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
 }
 
-.card,
 .c-card {
   overflow: hidden;
   background: var(--paper);
@@ -503,31 +440,26 @@ summary:focus-visible {
   box-shadow: var(--shadow-soft);
 }
 
-.card p,
 .c-card p {
   margin: 0;
   padding: 0.9rem;
 }
 
-.card-image,
 .c-card__image {
   min-height: 9rem;
   background: linear-gradient(135deg, #6f7d63, #a3947e 55%, #4f6b57);
 }
 
-.photo-grid,
 .c-photo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 0.9rem;
 }
 
-.photo-grid figure,
 .c-photo-grid figure {
   margin: 0;
 }
 
-.photo-placeholder,
 .c-photo-grid__placeholder {
   min-height: 11rem;
   border: 1px solid var(--line);
@@ -541,7 +473,6 @@ figcaption {
   color: color-mix(in srgb, var(--ink) 78%, var(--dusk));
 }
 
-.callout,
 .c-callout {
   padding: 1rem 1rem 1.2rem;
   background: var(--paper);
@@ -551,7 +482,6 @@ figcaption {
   box-shadow: var(--shadow-soft);
 }
 
-.timeline,
 .c-timeline {
   margin: 0;
   padding: 0;
@@ -559,7 +489,6 @@ figcaption {
   border-left: 2px solid var(--line);
 }
 
-.timeline li,
 .c-timeline li {
   position: relative;
   margin-left: 1rem;
@@ -567,7 +496,6 @@ figcaption {
   padding-left: 1rem;
 }
 
-.timeline li::before,
 .c-timeline li::before {
   content: "";
   position: absolute;
@@ -579,12 +507,10 @@ figcaption {
   background: var(--mesquite);
 }
 
-.notes-list,
 .c-notes-list {
   padding-left: 1.2rem;
 }
 
-.private-note,
 .c-private-note {
   color: color-mix(in srgb, var(--ink) 88%, #5a5a5a);
 }
@@ -592,7 +518,6 @@ figcaption {
 /* =========================
    Footer
 ========================= */
-.site-footer,
 .c-site-footer {
   padding: 1.4rem 0 1.7rem;
   font-size: 0.95rem;
@@ -600,7 +525,6 @@ figcaption {
   border-top: 1px solid var(--line);
 }
 
-.site-footer p,
 .c-site-footer p {
   margin: 0.2rem 0;
 }
@@ -608,42 +532,36 @@ figcaption {
 /* =========================
    Motion
 ========================= */
-[class^="reveal-"],
 [class^="u-reveal-"] {
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 600ms ease, transform 700ms ease;
 }
 
-.hero.is-visible .reveal-1,
 .c-hero.is-visible .u-reveal-1 {
   transition-delay: 80ms;
   opacity: 1;
   transform: translateY(0);
 }
 
-.hero.is-visible .reveal-2,
 .c-hero.is-visible .u-reveal-2 {
   transition-delay: 160ms;
   opacity: 1;
   transform: translateY(0);
 }
 
-.hero.is-visible .reveal-3,
 .c-hero.is-visible .u-reveal-3 {
   transition-delay: 240ms;
   opacity: 1;
   transform: translateY(0);
 }
 
-.hero.is-visible .reveal-4,
 .c-hero.is-visible .u-reveal-4 {
   transition-delay: 320ms;
   opacity: 1;
   transform: translateY(0);
 }
 
-.hero.is-visible .reveal-5,
 .c-hero.is-visible .u-reveal-5 {
   transition-delay: 400ms;
   opacity: 1;
@@ -654,23 +572,18 @@ figcaption {
    Responsive
 ========================= */
 @media (min-width: 760px) {
-  .container,
   .l-container {
     width: min(var(--container-max), 92%);
   }
 
-  .hero-content,
   .c-hero__content {
     padding-left: 0;
   }
 
-  .nav-toggle,
   .c-nav__toggle {
     display: none;
   }
 
-  .nav-list,
-  .nav-details:not([open]) .nav-list,
   .c-nav__list,
   .c-nav:not([open]) .c-nav__list {
     position: static;
@@ -687,50 +600,41 @@ figcaption {
 }
 
 @media (max-width: 759px) {
-  .narrow,
   .l-container--narrow {
     padding-inline: 0.45rem;
   }
 }
 
 @media (max-width: 700px) {
-  .hero-content,
   .c-hero__content {
     padding-block: 2.2rem;
   }
 
-  .hero h1,
   .c-hero h1 {
     font-size: clamp(2.15rem, 9vw, 3rem);
   }
 
-  .hero p,
   .c-hero p {
     margin-top: 0.65rem;
     font-size: 1.05rem;
   }
 
-  .hero-actions,
   .c-hero__actions {
     margin-top: 0.95rem;
   }
 
-  .hero-image,
   .c-hero__image {
     background-position: center 16%;
   }
 
-  .home-hero .hero-image,
   .c-hero--home .c-hero__image {
     background-position: center 18%;
   }
 
-  .page-hero .hero-image,
   .c-hero--page .c-hero__image {
     background-position: center 20%;
   }
 
-  .page-hero .hero-actions,
   .c-hero--page .c-hero__actions {
     justify-content: center;
     gap: 0.5rem;
@@ -738,26 +642,22 @@ figcaption {
     margin-inline: auto;
   }
 
-  .page-hero .hero-actions .btn,
   .c-hero--page .c-hero__actions .c-btn {
     width: auto;
     flex: 0 1 auto;
     white-space: nowrap;
   }
 
-  .centennial-actions,
   .c-actions--centennial {
     justify-content: center;
   }
 
-  .centennial-actions .btn,
   .c-actions--centennial .c-btn {
     white-space: nowrap;
   }
 }
 
 @media (max-width: 420px) {
-  .hero-badge,
   .c-hero__badge {
     width: min(340px, 78vw);
   }
@@ -773,12 +673,10 @@ figcaption {
     scroll-behavior: auto !important;
   }
 
-  .hero-image,
   .c-hero__image {
     transform: none;
   }
 
-  [class^="reveal-"],
   [class^="u-reveal-"] {
     opacity: 1 !important;
     transform: none !important;
