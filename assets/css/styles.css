@@ -194,11 +194,11 @@ summary:focus-visible {
   transform: scale(1.03);
   z-index: 0;
   filter:
-    contrast(1.1)
-    saturate(1.15)
-    brightness(0.88)
-    sepia(0.25)
-    hue-rotate(-8deg);
+    contrast(1.12)
+    saturate(1.2)
+    brightness(0.85)
+    sepia(0.32)
+    hue-rotate(-10deg);
 }
 
 .home-hero .hero-image {
