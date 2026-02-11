@@ -154,7 +154,7 @@ summary:focus-visible {
 
 .hero {
   position: relative;
-  min-height: clamp(24rem, 55vh, 34rem);
+  min-height: clamp(28rem, 65vh, 40rem);
   display: grid;
   align-items: center;
   overflow: hidden;
@@ -202,7 +202,7 @@ summary:focus-visible {
 }
 
 .home-hero .hero-image {
-  background-position: center 35%;
+  background-position: center 22%;
 }
 
 .page-hero .hero-image {
@@ -591,6 +591,10 @@ figcaption {
 
   .hero-actions {
     margin-top: 0.95rem;
+  }
+
+  .home-hero .hero-image {
+  background-position: center 18%;
   }
 }
 
