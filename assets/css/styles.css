@@ -382,6 +382,28 @@ summary:focus-visible {
   background: rgb(244 239 232 / 18%);
 }
 
+/* =========================
+   Hero buttons (mockup style)
+========================= */
+
+.hero .btn {
+  padding: 0.5rem 0.9rem;      /* smaller */
+  font-size: 0.9rem;           /* reduce text size */
+  border-radius: 6px;          /* rectangle, not pill */
+  box-shadow: none;            /* flatter look */
+  letter-spacing: 0.02em;
+}
+
+.hero .btn-secondary {
+  background: rgb(244 239 232 / 10%);
+  border: 1px solid rgb(244 239 232 / 28%);
+  color: #f8f3ec;
+}
+
+.hero .btn-secondary:hover {
+  background: rgb(244 239 232 / 16%);
+}
+
 .section {
   padding: clamp(2.2rem, 6vw, 4rem) 0;
 }
