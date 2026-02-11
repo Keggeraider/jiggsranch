@@ -349,6 +349,9 @@ summary:focus-visible {
   margin-top: 0.85rem;    /* bring CTAs closer to subhead */
 }
 
+.home-hero .hero-top { align-self: start; }
+.home-hero .hero-bottom { align-self: end; }
+
 #centennial-title {
   scroll-margin-top: 5rem;
 }
@@ -583,7 +586,7 @@ figcaption {
   .hero-image {
     background-position: center 16%;
   }
-  
+
   .home-hero .hero-image {
   background-position: center 18%;
   }
