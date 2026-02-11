@@ -598,6 +598,8 @@ figcaption {
   .page-hero .hero-actions {
     justify-content: center;
     gap: 0.5rem;
+    max-width: 22rem;
+    margin-inline: auto;
   }
 
   .page-hero .hero-actions .btn {
