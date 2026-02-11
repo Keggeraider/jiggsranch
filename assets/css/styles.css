@@ -382,6 +382,20 @@ summary:focus-visible {
   background: rgb(244 239 232 / 18%);
 }
 
+.centennial-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+}
+
+.centennial-actions .btn {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
 /* =========================
    Hero buttons (mockup style)
 ========================= */
@@ -606,6 +620,15 @@ figcaption {
     flex: 0 1 auto;        /* don't stretch */
     width: auto;           /* ensure not full-width */
     white-space: nowrap;   /* keeps each button on one line */
+  }
+
+  .centennial-actions {
+    justify-content: center;
+  }
+
+  /* Keep buttons from becoming awkwardly tall */
+  .centennial-actions .btn {
+    white-space: nowrap;
   }
 }
 
