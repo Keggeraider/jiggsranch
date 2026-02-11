@@ -594,6 +594,17 @@ figcaption {
   .page-hero .hero-image {
     background-position: center 20%;
   }
+
+  .page-hero .hero-actions {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .page-hero .hero-actions .btn {
+    flex: 0 1 auto;        /* don't stretch */
+    width: auto;           /* ensure not full-width */
+    white-space: nowrap;   /* keeps each button on one line */
+  }
 }
 
 @media (max-width: 420px) {
