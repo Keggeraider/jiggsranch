@@ -771,6 +771,11 @@ figcaption {
   .c-actions--centennial .c-btn {
     white-space: nowrap;
   }
+
+  .c-card__figure,
+  .c-card__image {
+    height: 11rem;
+  }
 }
 
 @media (max-width: 420px) {
