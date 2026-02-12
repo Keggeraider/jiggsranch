@@ -450,6 +450,23 @@ summary:focus-visible {
   background: linear-gradient(135deg, #6f7d63, #a3947e 55%, #4f6b57);
 }
 
+.c-card__figure {
+  margin: 0;
+}
+
+.c-card__photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  aspect-ratio: 3 / 2;   /* matches 1200x800 */
+  object-fit: cover;
+}
+
+.c-card__figure {
+  height: 9rem;          /* match whatever your .c-card__image height is */
+  overflow: hidden;
+}
+
 .c-photo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
