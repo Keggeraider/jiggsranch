@@ -462,6 +462,7 @@ summary:focus-visible {
   display: block;
   aspect-ratio: 3 / 2;   /* matches 1200x800 */
   object-fit: cover;
+  object-position: center;
 }
 
 .c-card__figure,
@@ -719,7 +720,7 @@ figcaption {
   .l-container--narrow {
     padding-inline: 0.45rem;
   }
-  
+
   .c-card__figure,
   .c-card__image {
     height: 11rem;
