@@ -411,6 +411,11 @@ summary:focus-visible {
   box-shadow: none;
 }
 
+a:not(.c-btn) {
+  text-decoration: underline dotted;
+  color: var(--mesquite);
+}
+
 /* =========================
    Content Sections
 ========================= */
