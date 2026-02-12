@@ -786,6 +786,10 @@ figcaption {
   .c-card__photo--workin {
     object-position: center 20%;
   }
+
+  .c-card__photo--time {
+    object-position: center 15%;
+  }
 }
 
 @media (max-width: 420px) {
