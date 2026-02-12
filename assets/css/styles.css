@@ -719,6 +719,11 @@ figcaption {
   .l-container--narrow {
     padding-inline: 0.45rem;
   }
+  
+  .c-card__figure,
+  .c-card__image {
+    height: 11rem;
+  }
 }
 
 @media (max-width: 700px) {
