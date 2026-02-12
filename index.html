@@ -77,48 +77,79 @@
           <div class="c-card-grid">
             <article class="c-card">
               <!-- Replace with real ranch photo -->
-              <div class="c-card__image" role="img" aria-label="Early morning light over pasture"></div>
+              <button class="c-card__media-btn" type="button" data-lightbox-label="Early morning light over pasture">
+                <div class="c-card__image" role="img" aria-label="Early morning light over pasture"></div>
+              </button>
               <p><strong>Sunrise Coffee</strong> — The day starts slow, with a cup in hand and the light changing across the pasture, while deer graze.</p>
             </article>
             <article class="c-card">
               <!-- Replace with real ranch photo -->
-              <div class="c-card__image" role="img" aria-label="Mesquite trees in the wind"></div>
+              <button class="c-card__media-btn" type="button" data-lightbox-label="Mesquite trees in the wind">
+                <div class="c-card__image" role="img" aria-label="Mesquite trees in the wind"></div>
+              </button>
               <p><strong>Mesquite &amp; Wind</strong> — The sound of the trees and the feel of the air before the heat settles in.</p>
             </article>
             <article class="c-card">
               <!-- Replace with real ranch photo -->
-              <div class="c-card__image" role="img" aria-label="Fence line stretching across ranch land"></div>
+              <button class="c-card__media-btn" type="button" data-lightbox-label="Fence line stretching across ranch land">
+                <div class="c-card__image" role="img" aria-label="Fence line stretching across ranch land"></div>
+              </button>
               <p><strong>Fence Lines</strong> — Miles of stories and the familiar view that always feels like home.</p>
             </article>
             <article class="c-card">
               <!-- Replace with real ranch photo -->
-              <div class="c-card__image" role="img" aria-label="Long family table set for dinner"></div>
+              <button class="c-card__media-btn" type="button" data-lightbox-label="Long family table set for dinner">
+                <div class="c-card__image" role="img" aria-label="Long family table set for dinner"></div>
+              </button>
               <p><strong>Family Dinners</strong> — A table that stretches, with room for one more chair.</p>
             </article>
             <article class="c-card">
               <!-- Replace with real ranch photo -->
-              <div class="c-card__image" role="img" aria-label="Boots on porch during quiet morning"></div>
+              <button class="c-card__media-btn" type="button" data-lightbox-label="Boots on porch during quiet morning">
+                <div class="c-card__image" role="img" aria-label="Boots on porch during quiet morning"></div>
+              </button>
               <p><strong>Quiet Mornings</strong> — Boots on a porch, a dog nearby, and nothing urgent.</p>
             </article>
             <article class="c-card">
-              <figure class="c-card__figure">
-                <picture>
-                  <source srcset="/assets/img/quiet-evenings.webp" type="image/webp" />
-                  <img
-                    class="c-card__photo"
-                    src="/assets/img/quiet-evenings.webp"
-                    alt="Gate at Jiggs Ranch at dusk with a warmly lit vintage trailer beyond"
-                    width="1200"
-                    height="800"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-              </figure>
+              <button
+                class="c-card__media-btn"
+                type="button"
+                data-lightbox-label="Quiet evenings at Jiggs Ranch."
+                data-lightbox-src="/assets/img/quiet-evenings.webp"
+                data-lightbox-alt="Gate at Jiggs Ranch at dusk with a warmly lit vintage trailer beyond">
+                <figure class="c-card__figure">
+                  <picture>
+                    <source srcset="/assets/img/quiet-evenings.webp" type="image/webp" />
+                    <img
+                      class="c-card__photo"
+                      src="/assets/img/quiet-evenings.webp"
+                      alt="Gate at Jiggs Ranch at dusk with a warmly lit vintage trailer beyond"
+                      width="1200"
+                      height="800"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
+                </figure>
+              </button>
 
               <p><strong>Quiet Evenings</strong> — The gate, a soft glow from the trailer, and the ranch settling in for the night.</p>
             </article>
           </div>
+
+          <dialog class="c-lightbox" id="love-lightbox" aria-labelledby="love-lightbox-caption">
+            <div class="c-lightbox__panel">
+              <button class="c-lightbox__nav c-lightbox__nav--prev" type="button" data-lightbox-prev aria-label="Previous photo">‹</button>
+              <button class="c-lightbox__nav c-lightbox__nav--next" type="button" data-lightbox-next aria-label="Next photo">›</button>
+              <button class="c-lightbox__dismiss" type="button" data-lightbox-close aria-label="Close enlarged photo">×</button>
+              <figure class="c-lightbox__figure" hidden>
+                <img id="love-lightbox-image" alt="" />
+              </figure>
+              <div class="c-lightbox__placeholder" id="love-lightbox-placeholder" role="img" aria-label=""></div>
+              <p id="love-lightbox-caption"></p>
+              <button class="c-lightbox__close c-btn c-btn--secondary" type="button" data-lightbox-close>Close</button>
+            </div>
+          </dialog>
         </div>
       </section>
 
@@ -181,5 +212,7 @@
         <p><strong>Jiggs Ranch</strong></p>
         <p>Private family site • Please keep within our circle.</p>
       </div>
-    </footer>  </body>
+    </footer>
+    <script src="/assets/js/main.js" defer></script>
+  </body>
 </html>
