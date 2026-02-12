@@ -15,25 +15,40 @@
 
   let lastTrigger = null;
   let currentIndex = -1;
+  let imageToken = 0;
 
   const renderAtIndex = function (index) {
     if (!openers.length) return;
     currentIndex = (index + openers.length) % openers.length;
     const btn = openers[currentIndex];
-    const label = btn.dataset.lightboxLabel || "Ranch photo";
-    const src = btn.dataset.lightboxSrc || "";
-    const alt = btn.dataset.lightboxAlt || label;
+    const embeddedImage = btn.querySelector("img");
+    const label = btn.dataset.lightboxLabel || embeddedImage?.alt || "Ranch photo";
+    const src = btn.dataset.lightboxSrc || embeddedImage?.currentSrc || embeddedImage?.src || "";
+    const alt = btn.dataset.lightboxAlt || embeddedImage?.alt || label;
 
     captionEl.textContent = label;
 
     if (src) {
+      const token = imageToken + 1;
+      imageToken = token;
+
       imageEl.src = src;
       imageEl.alt = alt;
       imageWrap.hidden = false;
       placeholderEl.hidden = true;
+
+      imageEl.onerror = function () {
+        if (token !== imageToken) return;
+        imageEl.removeAttribute("src");
+        imageEl.alt = "";
+        imageWrap.hidden = true;
+        placeholderEl.hidden = false;
+        placeholderEl.setAttribute("aria-label", label);
+      };
     } else {
       imageEl.removeAttribute("src");
       imageEl.alt = "";
+      imageEl.onerror = null;
       imageWrap.hidden = true;
       placeholderEl.hidden = false;
       placeholderEl.setAttribute("aria-label", label);
