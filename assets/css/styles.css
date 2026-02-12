@@ -368,7 +368,7 @@ summary:focus-visible {
 }
 
 .c-btn--secondary {
-  color: var(--clay); /*color: #f8f3ec; testing button color changes*/
+  color: #f8f3ec; /*testing button color changes*/
   background: rgb(244 239 232 / 12%);
   border-color: rgb(244 239 232 / 34%);
 }
@@ -602,6 +602,7 @@ summary:focus-visible {
 .c-lightbox__close {
   margin-top: 0.7rem;
   border-radius: 0.5rem;
+  color: var(--clay);
 }
 
 .c-photo-grid {
