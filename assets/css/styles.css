@@ -452,6 +452,8 @@ summary:focus-visible {
 
 .c-card__figure {
   margin: 0;
+  height: 9rem;
+  overflow: hidden;
 }
 
 .c-card__photo {
@@ -462,9 +464,10 @@ summary:focus-visible {
   object-fit: cover;
 }
 
-.c-card__figure {
-  height: 9rem;          /* match whatever your .c-card__image height is */
-  overflow: hidden;
+.c-card__figure,
+.c-card__image {
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
 }
 
 .c-photo-grid {
