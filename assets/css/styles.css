@@ -782,6 +782,10 @@ figcaption {
   .c-card__image {
     height: 11rem;
   }
+
+  .c-card__photo--workin {
+    object-position: center 20%;
+  }
 }
 
 @media (max-width: 420px) {
