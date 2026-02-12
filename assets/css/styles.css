@@ -368,7 +368,7 @@ summary:focus-visible {
 }
 
 .c-btn--secondary {
-  color: #f8f3ec;
+  color: var(--clay); /*color: #f8f3ec; testing button color changes*/
   background: rgb(244 239 232 / 12%);
   border-color: rgb(244 239 232 / 34%);
 }
