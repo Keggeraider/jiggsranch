@@ -361,10 +361,12 @@ summary:focus-visible {
   border: 1px solid transparent;
   border-radius: 999px;
   box-shadow: 0 10px 22px rgb(0 0 0 / 18%);
+  transition: background 200ms ease, color 200ms ease, transform 160ms ease;
 }
 
 .c-btn:hover {
   background: #a85a3e;
+  transform: translateY(-2px);
 }
 
 .c-btn--secondary {
