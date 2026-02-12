@@ -802,6 +802,12 @@ figcaption {
     height: 2.15rem;
     font-size: 1.35rem;
   }
+
+  .c-card__figure,
+  .c-card__image {
+    height: 12rem;
+  }
+
 }
 
 @media (prefers-reduced-motion: reduce) {
