@@ -578,6 +578,11 @@ summary:focus-visible {
   border-radius: 0.65rem;
 }
 
+.c-lightbox__figure[hidden],
+.c-lightbox__placeholder[hidden] {
+  display: none !important;
+}
+
 .c-lightbox__figure img {
   object-fit: contain;
   background: linear-gradient(180deg, #4a5358, #2a353b);
