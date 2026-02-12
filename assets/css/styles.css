@@ -808,6 +808,10 @@ figcaption {
     height: 12rem;
   }
 
+  .c-card__photo--workin {
+    object-position: center 20%;
+  }
+
 }
 
 @media (prefers-reduced-motion: reduce) {
